@@ -1,243 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="logo.png">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>flowershop</title>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        body{
-            background: white;
-        }
-        ::-webkit-scrollbar{
-            display: none;
-        }
-        #logo{
-            height: 5em;
-            position: absolute;
-            left: 5em;
-        }
-        header{
-            display: block;
-            position: relative;
-        }
-        header h2{
-            margin-bottom: 10px;
-            width: 100%;
-            height: 2.5em;
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: smaller;
-            padding: 10px;
-            text-align: center;
-            color: white;
-            background: rgb(154, 88, 154);
-        }
-        .icons{
-            position: absolute;
-            right: 5em;
-            top: 0.8em;
-            display: flex;
-            gap: 1em;
-            padding: 0.5em;
-        }
-        .icons ion-icon{
-           cursor: pointer;
-           font-size: 25px;
-           font-weight: 100;
-        }
-        .mainHeader{
-            position: relative;
-            height: 5em;
-        }
-        ul{
-            display: flex;
-            gap: 5em;
-            align-items: center;
-            justify-content: center;
-        }
-        ul li{
-            list-style: none;
-            font-family:Arial, Helvetica, sans-serif;
-            cursor: pointer;
-        }
-        
-        ul li:hover{
-            color: red;
-            transition: color 0.2s ease-in-out;
-        }
-        nav{
-            height:1.5em;
-        }
-        .hero{
-            background: url('heroBg.png');
-            height: 30em;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            padding-top: 10em;
-            position: relative;
-        }
-        .hero h1{
-            font-size: 3em;
-            color: whitesmoke;
-            text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        .hero p{
-            color: whitesmoke;
-             text-shadow: 1px 3px 2px rgba(0,0,0,0.3);
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
-        .heroContent{
-            position: absolute;
-            right: 0;
-            padding-right: 5em;
-            display: block;
-        
-        }
-        .heroContent button{
-           cursor: pointer;
-           font-size: 20px;
-           margin-top: 1em;
-           padding: 15px 30px 15px 30px;
-           border: none;
-           color: whitesmoke;
-           background: rgb(154, 88, 154);
-           border-radius: 3px;
-        }
-        .heroContent button:hover{
-           cursor: pointer;
-            border: solid 1px;
-            color: red;
-            border-color: red;
-            background: none;
-            transition: background 0.2s ease-in-out;
-        }
-        main{
-            display: grid;
-            grid-template-columns: auto auto auto auto ;
-            padding: 5em;
-           align-items: center;
-           text-align: center;
-           
-        }
-        .flowersDiv{
-            position: relative;
-            height: 20em;
-            width: 15em;
-            display: flex;
-            flex-direction: column;
-            width: 10em;
-            color: rgb(87, 86, 86);
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        }
-        .flowersDivimg:hover{
-            cursor: pointer;
-            font-size:large;
-            transition: font-size 0.3s ease-in-out;
-        }
-        .flowersDiv h2{
-        font-size: 17px;
-        }
-        .flowersDiv h3{
-        font-size: 15px;
-        }
-        .flowersDiv img{
-            height: 15em;
-            width: 15em;
-        }
-    </style>
+  <link rel="icon" href="logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flowershop</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    header h2 {
+      width: 100%;
+      height: 2.5em;
+      font-size: smaller;
+      padding: 10px;
+      text-align: center;
+      color: white;
+      background: rgb(154, 88, 154);
+    }
+    .mainHeader {
+      height: 5em;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5em;
+    }
+    #logo {
+      height: 4em;
+    }
+    .icons {
+      display: flex;
+      gap: 1em;
+    }
+    .icons ion-icon {
+      font-size: 25px;
+      cursor: pointer;
+      color: #9A589A;
+      transition: transform 0.2s ease;
+    }
+    .icons ion-icon:hover {
+      transform: scale(1.2);
+    }
+    nav {
+      background-color: #9A589A;
+      padding: 1em 0;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 3em;
+    }
+    nav ul li {
+      list-style: none;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+    nav ul li:hover {
+      transform: scale(1.1);
+      color: #FFD1DC;
+    }
+    .hero {
+      background: url('heroBg.png') no-repeat center/cover;
+      height: 30em;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 5em;
+    }
+    .heroContent {
+      color: white;
+      text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+    }
+    .heroContent h1 {
+      font-size: 3em;
+    }
+    .heroContent p {
+      margin-top: 10px;
+    }
+    .heroContent button {
+      margin-top: 1em;
+      padding: 15px 30px;
+      background: rgb(154, 88, 154);
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+    .heroContent button:hover {
+      background: none;
+      color: red;
+      border: 1px solid red;
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2em;
+      padding: 4em;
+      background: #fdfdfd;
+    }
+    .flowersDiv {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1em;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .flowersDiv:hover {
+      transform: scale(1.05);
+    }
+    .flowersDiv img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .flowersDiv h2 {
+      margin-top: 1em;
+      font-size: 1.1em;
+    }
+    .flowersDiv h3 {
+      color: #888;
+      font-size: 0.95em;
+    }
+
+    footer {
+  background-color: #9A589A;
+  color: white;
+  padding: 1.5em 2em;
+  font-size: 0.85em;
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5em;
+}
+.footer-section {
+  flex: 1;
+  min-width: 180px;
+}
+.footer-section h3 {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+  border-bottom: 1px solid white;
+  padding-bottom: 0.3em;
+}
+.footer-section p {
+  line-height: 1.3em;
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 0.3em;
+  cursor: pointer;
+}
+.footer-section ul li:hover {
+  text-decoration: underline;
+}
+.social-icons {
+  display: flex;
+  gap: 0.7em;
+  margin-top: 0.5em;
+}
+.social-icons ion-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 1em;
+  font-size: 0.8em;
+  border-top: 1px solid white;
+  padding-top: 0.5em;
+}
+
+  </style>
 </head>
 <body>
   <header>
     <h2>Free Delivery Metro Manila, Calabarzon, Bulacan On All Orders</h2>
     <div class="mainHeader">
-    <img src="logo.png" alt="" id="logo">
-     <div class="icons">
+      <img src="logo.png" alt="Logo" id="logo">
+      <div class="icons">
         <ion-icon name="search-outline"></ion-icon>
         <ion-icon name="person-outline"></ion-icon>
         <ion-icon name="bag-outline"></ion-icon>
       </div>
-     </div>
-</header>
-  <nav> <ul>
-        <li>Home</li>
-        <li>Service</li>
-        <li>About Us</li>
-        <li>Contact Us</li>
-     </ul></nav>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>Service</li>
+      <li>About Us</li>
+      <li>Contact Us</li>
+    </ul>
+  </nav>
+
   <div class="hero">
     <div class="heroContent">
-    <h1>Beautiful Flower for <br>All Occasions</h1>
-    <p>Get fresh flowers delivered to your loved ones,<br> anywhere in the Philippines.</p>
-    <button>SHOP NOW</button>
+      <h1>Beautiful Flowers for <br>All Occasions</h1>
+      <p>Get fresh flowers delivered to your loved ones,<br> anywhere in the Philippines.</p>
+      <button>SHOP NOW</button>
     </div>
   </div>
+
   <main>
-    <!-- 1 DIV OF FLOWER -->
+    <!-- Product Cards -->
     <div class="flowersDiv">
-        <img src="/flowersImage/amalia.webp" alt="" class="flowersDivimg">
-        <h2>Amalia</h2>
-        <h3>₱3,890.00PHP</h3>
+      <img src="flowersImage/amalia.webp" alt="Amalia">
+      <h2>Amalia</h2>
+      <h3>₱3,890.00</h3>
     </div>
-    <!-- 1 DIV OF FLOWER -->
     <div class="flowersDiv">
-        <img src="/flowersImage/sincere-love.webp" alt="" class="flowersDivimg">
-        <h2>Sincere Love</h2>
-        <h3>₱3,890.00PHP</h3>
+      <img src="flowersImage/sincere-love.webp" alt="Sincere Love">
+      <h2>Sincere Love</h2>
+      <h3>₱3,890.00</h3>
     </div>
-    <!-- 1 DIV OF FLOWER -->
     <div class="flowersDiv">
-        <img src="/flowersImage/your-moment.webp" alt="" class="flowersDivimg">
-        <h2>Your Moment</h2>
-        <h3>₱3,890.00PHP</h3>
+      <img src="flowersImage/your-moment.webp" alt="Your Moment">
+      <h2>Your Moment</h2>
+      <h3>₱3,890.00</h3>
     </div>
-    <!-- 1 DIV OF FLOWER -->
     <div class="flowersDiv">
-        <img src="/flowersImage/expressions-of-love.webp" alt="" class="flowersDivimg">
-        <h2>Expressions of Love</h2>
-        <h3>₱3,890.00PHP</h3>
-    </div> 
-    <!-- 1 DIV OF FLOWER -->
-    <div class="flowersDiv">
-        <img src="/flowersImage/carmine.webp" alt="" class="flowersDivimg">
-        <h2>Carmine</h2>
-        <h3>₱3,890.00PHP</h3>
-    </div>  
-    <!-- 1 DIV OF FLOWER -->
-    <div class="flowersDiv">
-        <img src="/flowersImage/candy-rush.webp" alt="" class="flowersDivimg" >
-        <h2>Candy Rush</h2>
-        <h3>₱3,890.00PHP</h3>
+      <img src="flowersImage/expressions-of-love.webp" alt="Expressions of Love">
+      <h2>Expressions of Love</h2>
+      <h3>₱3,890.00</h3>
     </div>
-    <!-- 1 DIV OF FLOWER -->
     <div class="flowersDiv">
-        <img src="/flowersImage/amity.webp" alt="" class="flowersDivimg">
-        <h2>Amity</h2>
-        <h3>₱3,890.00PHP</h3>
+      <img src="flowersImage/carmine.webp" alt="Carmine">
+      <h2>Carmine</h2>
+      <h3>₱3,890.00</h3>
     </div>
-    <!-- 1 DIV OF FLOWER -->
     <div class="flowersDiv">
-        <img src="/flowersImage/fire-sunset.webp" alt="" class="flowersDivimg">
-        <h2>Fire Sunset</h2>
-        <h3>₱3,890.00PHP</h3>
-    </div>    
+      <img src="flowersImage/candy-rush.webp" alt="Candy Rush">
+      <h2>Candy Rush</h2>
+      <h3>₱3,890.00</h3>
+    </div>
+    <div class="flowersDiv">
+      <img src="flowersImage/amity.webp" alt="Amity">
+      <h2>Amity</h2>
+      <h3>₱3,890.00</h3>
+    </div>
+    <div class="flowersDiv">
+      <img src="flowersImage/fire-sunset.webp" alt="Fire Sunset">
+      <h2>Fire Sunset</h2>
+      <h3>₱3,890.00</h3>
+    </div>
   </main>
+
   <footer>
-   <div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-   </div>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About Us</h3>
+        <p>FlowerShop PH is a trusted name in floral delivery, serving Metro Manila and beyond. With premium-quality blooms and fast, 
+        reliable delivery, we bring elegance, freshness, and meaning to every bouquet. Your satisfaction is our top priority.</p><br>
+        <p>Your trusted online flower shop delivering love across the Philippines.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>FAQ</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <ul>
+          <li>Email: support@flowershop.ph</li>
+          <li>Phone: +63 912 345 6789</li>
+          <li>Facebook: /flowershopPH</li>
+        </ul>
+        <div class="social-icons">
+          <ion-icon name="logo-facebook"></ion-icon>
+          <ion-icon name="logo-instagram"></ion-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 FlowerShop PH. All rights reserved.
+    </div>
   </footer>
 </body>
 </html>
